@@ -193,10 +193,6 @@ a{
     border-radius: 6px;
   }
 
-
-.agreement-checkbox:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
   
   .agreement-checkbox input:checked ~ .checkmark {
     background-color: #FFB7D5;
@@ -222,4 +218,29 @@ a{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  .submit-btn{
+    width: 80px;
+    height: 80px;
+    margin-top: 37px;
+    background: #FFB7D5;
+    box-shadow: 0px 10px 30px #FFB7D5;
+    border-radius: 35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+    margin-bottom: 33px;
+  }
+
+  .alternative{
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+
+  .alternative .another{
+    color:#FFB7D5
   }
