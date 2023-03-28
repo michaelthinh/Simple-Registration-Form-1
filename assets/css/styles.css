@@ -11,3 +11,215 @@ body{
     font-family:"Poppins",sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+/* ---------------------------------------- Main container ---------------------------------------- */
+
+.container{
+    margin-top: 91px;
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-body{
+    display: flex;
+}
+
+.sign-up{
+    width: 43%;
+}
+
+.sign-up .header{
+    position: relative;
+    font-weight: 700;
+    font-size: 4.8rem;
+    color: #000000;
+}
+
+.header::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 80px;
+    height: 0px;
+    border: 3px solid #000000;
+}
+
+.social-link{
+    margin-top: 66px;
+    display:flex;
+    align-items:center;
+    gap: 14px;
+}
+
+.social-link-item{
+    width: 245px;
+    height: 48px;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.main-image{
+    width: 57%;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.social-link-item .social-image{
+    width: 25px;
+    height: 25px;
+    margin-left: 37px;
+}
+
+.social-link-item .desc{
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #494949;
+    margin-left: 13px;
+}
+
+.or-box{
+    padding: 42px 226px;
+}
+
+.or-box .or{
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.sign-up-image .main-image{
+    width: 100%;
+    max-height: 840px;
+    object-fit: cover;
+}
+
+.form{
+    flex-grow: 1;
+}
+
+.row {
+    display:flex;
+    column-gap: 14px;
+}
+
+.row-password{
+    margin-top: 26px;
+}
+
+.form-group{
+    flex-grow: 1;
+}
+
+.form-label,.form-input{
+    display: block;
+}
+
+.form-label{
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+.form-input{
+    margin-top: 14px;
+    width: 245px;
+    height: 48px;
+    background: #FAFDFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2;
+    letter-spacing: 0.25px;
+    color: #000000; 
+}
+
+.form-input::placeholder{
+    
+    opacity: 0.4;
+    
+}
+
+.form-input::content{
+    padding-left: 14px;
+}
+
+.agreement-checkbox{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+}
+
+.agreement-checkbox .desc{
+    margin-left: 21px;
+    max-width: 363px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.57;
+    letter-spacing: 0.25px;
+    color: #000000;
+    position: relative;
+}
+
+.agreement-checkbox input{
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: #FAFDFF;
+    border: 1px solid #E3E2E2;
+    border-radius: 6px;
+  }
+
+
+.agreement-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .agreement-checkbox input:checked ~ .checkmark {
+    background-color: #FFB7D5;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .agreement-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .agreement-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
