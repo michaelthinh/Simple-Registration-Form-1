@@ -68,6 +68,10 @@ a{
     align-items: center;
 }
 
+.social-link-item:hover{
+    background: #f0f0f0;
+}
+
 .main-image{
     width: 57%;
     margin-left: 10px;
@@ -114,9 +118,7 @@ a{
     column-gap: 14px;
 }
 
-.row-password{
-    margin-top: 26px;
-}
+
 
 .form-group{
     flex-grow: 1;
@@ -124,6 +126,10 @@ a{
 
 .form-label,.form-input{
     display: block;
+}
+
+.form-input:focus::placeholder{
+    color: transparent;
 }
 
 .form-label{
@@ -136,7 +142,7 @@ a{
     margin-top: 14px;
     width: 245px;
     height: 48px;
-    background: #FAFDFF;
+    background: #fefefe;
     border: 1px solid #E8E8E8;
     border-radius: 10px;
     padding: 8px 14px;
@@ -145,6 +151,8 @@ a{
     line-height: 2;
     letter-spacing: 0.25px;
     color: #000000; 
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .form-input::placeholder{
@@ -153,8 +161,17 @@ a{
     
 }
 
+
 .form-input::content{
     padding-left: 14px;
+}
+
+.row-password{
+    margin-top: 26px;
+}
+
+input[type="password"]{
+    width: 100%;
 }
 
 .agreement-checkbox{
@@ -163,6 +180,7 @@ a{
     flex-direction: row-reverse;
     justify-content: left;
     align-items: center;
+    cursor: pointer;
 }
 
 .agreement-checkbox .desc{
@@ -244,3 +262,8 @@ a{
   .alternative .another{
     color:#FFB7D5
   }
+
+  input:focus {
+    outline: 1px solid #ccc;
+    background-color: #FFF;
+}
