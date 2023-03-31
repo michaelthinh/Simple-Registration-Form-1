@@ -16,6 +16,11 @@ a{
     color:#000;
 }
 
+button{
+    outline: none;
+    border: none;
+}
+
 /* ---------------------------------------- Main container ---------------------------------------- */
 
 .container{
@@ -93,7 +98,7 @@ a{
 }
 
 .or-box{
-    padding: 42px 226px;
+    padding: 20px 226px;
 }
 
 .or-box .or{
@@ -132,10 +137,18 @@ a{
     color: transparent;
 }
 
-.form-label{
+
+
+.form-label,.form-message{
     font-weight: 400;
     font-size: 1.4rem;
     color: #000000;
+}
+
+.form-message{
+    display: inline-block;
+    margin-top: 14px;
+    color:#F00;
 }
 
 .form-input{
@@ -168,6 +181,10 @@ a{
 
 .row-password{
     margin-top: 26px;
+}
+
+.form-group.invalid .form-input{
+    border:1px solid #F00;
 }
 
 input[type="password"]{
@@ -242,7 +259,7 @@ input[type="password"]{
     width: 80px;
     height: 80px;
     margin-top: 37px;
-    background: #FFB7D5;
+    background: #F00;
     box-shadow: 0px 10px 30px #FFB7D5;
     border-radius: 35px;
     display:flex;

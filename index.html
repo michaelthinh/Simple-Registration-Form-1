@@ -50,31 +50,35 @@
                     <div class="or-box">
                         <span class="or">Or</span>
                     </div>
-                    <form action="" class="form" autocomplete="off">
+                    <form action="" class="form" autocomplete="off" id="form">
                         <div class="row">
                             <div class="form-group">
                                 <label for="name" class="form-label"
                                     >Name</label
                                 >
                                 <input
+                                    name="name"
                                     class="form-input"
                                     type="text"
                                     class="name"
                                     id="name"
                                     placeholder="abc"
                                 />
+                                <span class="form-message"></span>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label"
                                     >Email</label
                                 >
                                 <input
+                                    name="email"
                                     class="form-input"
                                     type="text"
                                     class="email"
                                     id="email"
                                     placeholder="abc@abc.com"
                                 />
+                                <span class="form-message"></span>
                             </div>
                         </div>
                         <div class="row row-password">
@@ -83,27 +87,32 @@
                                     >Password</label
                                 >
                                 <input
+                                    name="password"
                                     class="form-input"
                                     type="password"
                                     class="password"
                                     id="password"
                                     placeholder="**********"
                                 />
+                                <span class="form-message"></span>
                             </div>
                         </div>
-                        <!-- <div class="agreement-checkbox">
-                            <input
-                                type="checkbox"
-                                name="checkbox"
-                                id="checkbox"
-                                checked="checked"
-                            />
-                            <span class="checkmark"></span>
-                            <p class="desc">
-                                I’ve read and agree with terms of service and
-                                our privecy policy
-                            </p>
-                        </div> -->
+                        <div class="row row-password">
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label"
+                                    >Confirm Password</label
+                                >
+                                <input
+                                    name="confirm-password"
+                                    class="form-input"
+                                    type="password"
+                                    class="password"
+                                    id="confirm-password"
+                                    placeholder="**********"
+                                />
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
                         <label class="agreement-checkbox">
                             <p class="desc">
                                 I’ve read and agree with terms of service and
@@ -112,20 +121,24 @@
                             <input type="checkbox" checked="checked" />
                             <span class="checkmark"></span>
                         </label>
-                        <div class="submit-btn">
+                        <button
+                            class="submit-btn unable"
+                            type="submit"
+                            id="submit-btn"
+                        >
                             <img
                                 src="./assets/icons/next-icon.svg"
                                 alt=""
                                 class="submit-img"
                             />
-                        </div>
+                        </button>
                     </form>
                     <span class="alternative"
                         >Already have an account ?
                         <a href="#!" class="another">Sign in</a></span
                     >
                 </section>
-                <div class="sign-up-image">
+                <div class="sign-up-image" type="submit">
                     <img
                         src="./assets/img/join-us.jpg"
                         alt="Join Us"
@@ -134,5 +147,40 @@
                 </div>
             </div>
         </main>
+        <script src="./assets/js/script.js"></script>
+        <script>
+            // Output
+            Validator({
+                form: "#form",
+                errorSelector: ".form-message",
+                rules: [
+                    Validator.isRequired("#name", "Please fill in this field"),
+                    Validator.isRequired("#email", "Please fill in this field"),
+                    Validator.isEmail("#email", "This field must be email"),
+                    Validator.isRequired(
+                        "#password",
+                        "Please fill in this field"
+                    ),
+
+                    Validator.minLength("#password", 6),
+                    Validator.isRequired(
+                        "#confirm-password",
+                        "Please fill in this field"
+                    ),
+                    Validator.isConfirmed(
+                        "#confirm-password",
+                        function () {
+                            return document.querySelector("#form #password")
+                                .value;
+                        },
+                        "Confirmation password does not match password"
+                    ),
+                ],
+                // onSubmit: function (data) {
+                //     // Call API
+                //     console.log(data);
+                // },
+            });
+        </script>
     </body>
 </html>
