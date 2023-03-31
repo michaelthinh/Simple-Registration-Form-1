@@ -139,3 +139,9 @@ Validator.isConfirmed = function (selector, getValue, message) {
         },
     };
 };
+
+var checkBtn = document.querySelector("#check-btn");
+var submitBtn = document.querySelector("#submit-btn");
+checkBtn.onclick = function () {
+    submitBtn.classList.remove("unable");
+};

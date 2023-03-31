@@ -226,6 +226,7 @@ input[type="password"]{
     background: #FAFDFF;
     border: 1px solid #E3E2E2;
     border-radius: 6px;
+    display: inline-block;
   }
 
   
@@ -267,6 +268,11 @@ input[type="password"]{
     justify-content:center;
     cursor: pointer;
     margin-bottom: 33px;
+  }
+
+  .submit-btn.unable{
+    background: #FFB7D5;
+    pointer-events: none;
   }
 
   .alternative{
