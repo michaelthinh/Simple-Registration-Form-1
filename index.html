@@ -50,7 +50,13 @@
                     <div class="or-box">
                         <span class="or">Or</span>
                     </div>
-                    <form action="" class="form" autocomplete="off" id="form">
+                    <form
+                        action=""
+                        class="form"
+                        autocomplete="off"
+                        id="form"
+                        method="POST"
+                    >
                         <div class="row">
                             <div class="form-group">
                                 <label for="name" class="form-label"
@@ -156,6 +162,7 @@
             // Output
             Validator({
                 form: "#form",
+                formGroupSelector: ".form-group",
                 errorSelector: ".form-message",
                 rules: [
                     Validator.isRequired("#name", "Please fill in this field"),
@@ -179,11 +186,12 @@
                         },
                         "Confirmation password does not match password"
                     ),
+                    // Validator.isRequired('input[name="gender"]'),
                 ],
-                // onSubmit: function (data) {
-                //     // Call API
-                //     console.log(data);
-                // },
+                onSubmit: function (data) {
+                    // Call API
+                    console.log(data);
+                },
             });
         </script>
     </body>
