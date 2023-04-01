@@ -24,15 +24,15 @@ button{
 /* ---------------------------------------- Main container ---------------------------------------- */
 
 .container{
-    margin-top: 91px;
+    margin: 91px auto;
     width: 1170px;
     max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .container-body{
     display: flex;
+    gap:100px;
 }
 
 .sign-up{
